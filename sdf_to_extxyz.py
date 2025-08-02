@@ -17,7 +17,7 @@ def convert_sdf_to_extxyz(sdf_dir, output_file):
             write(output_file, atoms, format="extxyz", append=True)
             print(f"✔ Converted: {filename}")
         except Exception as e:
-            print(f"⚠️ Failed to read {filename}: {e}")
+            print(f"Failed to read {filename}: {e}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Batch convert .sdf files to .extxyz format using ASE")
