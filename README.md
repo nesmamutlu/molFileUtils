@@ -1,9 +1,15 @@
 # molFileUtils
 
-Tools for converting molecular file formats.  
-Currently supports batch conversion from `.sdf` to `.extxyz` using ASE.
+Tools for converting molecular structure files.  
+This tool converts `.sdf` files into `.extxyz` format using ASE, while automatically:
 
-## Usage
+- Centering each molecule in a cubic box
+- Labeling each structure using the SDF file name (e.g., `mol_12345.sdf` → `label=mol_12345`)
 
+---
+
+#Usage
+
+#Convert a single SDF file:
 ```bash
-python sdf_to_extxyz.py input_sdf_directory output_filename.extxyz
+python sdf_to_extxyz.py path/to/your_file.sdf
